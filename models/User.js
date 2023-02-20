@@ -21,8 +21,7 @@ User.init(
       allowNull: false,
       unique: true,
       validate: {
-        len: [4, 32],
-        isAlphanumeric: true,
+        len: [6],
       },
     },
     email: {

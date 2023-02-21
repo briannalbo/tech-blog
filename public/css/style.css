@@ -19,9 +19,36 @@ nav {
 }
 
 main{
+    display: flex;
     padding-top: 50px;
     flex-direction: column;
     align-content: center;
     align-items: center;
     width: 100%;
+    text-align: center;
+}
+
+#login {
+    display: flex;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    flex-direction: column;
+    border: 1px solid gray;
+}
+
+#login input {
+    align-self: center;
+    width: 150px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+#login h3 {
+    padding-top: 10px;
+}
+
+#login button {
+    width: 65px;
+    align-self: center;
 }

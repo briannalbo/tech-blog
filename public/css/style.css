@@ -52,3 +52,38 @@ main{
     width: 65px;
     align-self: center;
 }
+
+#post-box {
+    display: flex;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    flex-direction: column;
+    border: 1px solid gray;
+}
+
+#post-box h3 {
+    padding-top: 10px;
+}
+
+#post-box input {
+    align-self: center;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+#post-box button {
+    width: 95px;
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+#new-post-title {
+    width: 350px;
+}
+
+#new-post-text {
+    width: 350px;
+    height:230px;
+    flex-wrap: wrap;
+}

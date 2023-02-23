@@ -12,9 +12,17 @@ const logoutDash = async () => {
     }
   };
   
-//   document.querySelector('#logoutBtn').addEventListener('click', logout);
+const newPost = async () => {
+    document.location.replace('dashboard/new-post');
+    console.log('create your post here');
+};
+
+document
+.querySelector('#add-post')
+.addEventListener("click", newPost);
+
 
   document
-  .querySelector('#test')
+  .querySelector('#logout')
   .addEventListener("click", logoutDash);
 

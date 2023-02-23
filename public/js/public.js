@@ -48,11 +48,23 @@ const signupFormHandler = async (event) => {
   }
 };
 //eventlisteners to trigger functions above
-const loginButton = document.querySelector('#loginBtn');
-const signupBtn = document.querySelector('#signupBtn');
+// const loginButton = document.querySelector('#loginBtn');
+// const signupBtn = document.querySelector('#signupBtn');
+// const logoutBtn = document.querySelector('#logout');
 
-loginButton.addEventListener("click", loginFormHandler);
-signupBtn.addEventListener("click", signupFormHandler);
+// loginButton.addEventListener("click", loginFormHandler);
+// signupBtn.addEventListener("click", signupFormHandler);
+// logoutBtn.addEventListener("click", logoutDash);
 
 
+
+
+
+document
+  .querySelector('#loginBtn')
+  .addEventListener("click", loginFormHandler);
+
+document
+  .querySelector('#signupBtn')
+  .addEventListener("click", signupFormHandler);
 

@@ -87,3 +87,34 @@ main{
     height:230px;
     flex-wrap: wrap;
 }
+
+#single-post {
+    display: flex;
+    width: 500px;
+    text-align: center;
+    flex-direction: column;
+    border: 1px solid gray;
+    margin-bottom: 20px;
+
+}
+
+#post-info {
+    font-size: 11px;
+    float: right;
+    margin-right: 15px;
+}
+
+#new-comment-form {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#commentBtn {
+    width:55px;
+    text-align: center;
+    float: right;
+    align-self: flex-end;
+    margin-top: 5px;
+}

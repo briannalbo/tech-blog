@@ -2,14 +2,14 @@
 
 <div class="posts">
   {{#each posts}}
-  <article class="card">
+  <article class="card" id="single-post">
     <div>
       <h2>
         <a href="/post/{{id}}">{{title}}</a>
       </h2>
       <p>{{post_text}}</p>
       <div>
-        Posted by {{user.name}} on {{format_date createdAt}}
+        <p id="post-info">Posted by {{user.name}} on {{format_date createdAt}}</p>
       </div>
     </div>
     <div class="card-body">

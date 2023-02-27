@@ -1,15 +1,14 @@
-<div class="post">
+
+<container id="single-post">
   <article class="card">
-    <div>
-      <h2>{{post.title}}</h2>
-      <div>
-        Posted by {{post.user.name}} on {{format_date post.createdAt}}
-      </div>
-    </div>
-    <div class="card-body">
+    
+      <h2>{{post.title}}</h2>     
+    <p>
       {{post.post_text}}
-    </div>
+    </p>
+    <p id="post-info"> Posted by: {{post.user.name}} on {{format_date post.createdAt}}</p>
   </article>
+  </container>
 
   {{#if post.Comments}}
     <section class="card">
@@ -33,18 +32,9 @@
   {{/if}}
 
   <form id="new-comment-form" class="card">
-    <div class="card-header">
-      <h3>Add New Comment</h3>
-    </div>
 
-    <div class="card-body">
-      <input type="hidden" name="post-id" value="{{post.id}}" />
-
+      <input type="hidden" name="post-id" placeholder="add a" value="{{post.id}}" />
       <label class="form-label" for="comment-body">Comment</label>
-
-      <textarea name="comment-body" class="form-input"></textarea>
-
-      <button>Submit</button>
-    </div>
+      <textarea name="comment-body" placeholder="add a comment.." class="form-input"></textarea>
+      <button id="commentBtn">Submit</button>
   </form>
-</div>

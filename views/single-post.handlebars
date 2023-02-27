@@ -17,7 +17,7 @@
       </div>
 
       <div class="card-body">
-        {{#each post.Comments}}
+        {{#each post.comments}}
           <div>
             <p>
               {{body}}
@@ -33,8 +33,10 @@
 
   <form id="new-comment-form" class="card">
 
-      <input type="hidden" name="post-id" placeholder="add a" value="{{post.id}}" />
+      <input type="hidden"  id="newComment" name="post-id" value="{{post.id}}" />
       <label class="form-label" for="comment-body">Comment</label>
-      <textarea name="comment-body" placeholder="add a comment.." class="form-input"></textarea>
+      <textarea id="commentBody" name="comment-body" placeholder="add a comment.." class="form-input"></textarea>
       <button id="commentBtn">Submit</button>
   </form>
+
+<script src="/js/comment.js"></script>

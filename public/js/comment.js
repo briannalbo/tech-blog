@@ -17,6 +17,8 @@ const addCommentFormHandler = async (event) => {
       }
     }
   };
+
+
   // event listener for comment form submission
   document
     .querySelector('#commentBtn')

@@ -7,6 +7,7 @@ header {
 }
 
 header h1 {
+    text-indent: 15px;
     font-size: 36px;
     color: aliceblue;
     width: 200px;
@@ -117,4 +118,28 @@ main{
     float: right;
     align-self: flex-end;
     margin-top: 5px;
+}
+
+#user-comment {
+    /* display: flex; */
+    width: 500px;
+    flex-direction: column;
+    border-bottom: .5px solid gray;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+#user-comment-info {
+    width: 500px;
+    height: 20px;
+    text-align: left;
+    background-color: darkblue;
+    color: aliceblue;
+    align-self: flex-start;
+    text-indent: 10px;
+}
+
+#comment-date {
+    font-size: 11px;
+    text-align: right;
 }

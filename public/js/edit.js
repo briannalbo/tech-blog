@@ -23,7 +23,23 @@ console.log(newText)
   }
 };
 
+//function to help delete a post
+const deletePost = async function () {
+    await fetch(`/api/posts/${postId}`, {
+      method: "DELETE",
+    })
+//after post is successfully deleted, brings user back to their dashboard
+        document.location.replace('/dashboard');
+      };
+
+
+
+
 //event listeners to trigger functions above 
 document
   .querySelector('#updateBtn')
   .addEventListener("click", updatePostFormHandler);
+
+  document
+  .querySelector('#deleteBtn')
+  .addEventListener("click", deletePost);

@@ -1,5 +1,5 @@
 const withAuth = require('../utils/auth');
-const { User } = require('../models');
+const { User, Post } = require('../models');
 const router = require('express').Router();
 
 
@@ -7,34 +7,34 @@ const router = require('express').Router();
 
 router.get('/', withAuth, async (req, res) => {
   try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+    const postData = await Post.findAll({
+      where: {
+        userId: req.session.user_id,
+      },
     });
 
-    const users = userData.map((user) => user.get({ plain: true }));
+    const posts = postData.map((post) => post.get({ plain: true }));
 
     res.render('dashboard', {
-      users,
+      posts,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
-    res.status(500).json(err);
-    console.log('not logged in');
+    res.redirect('login');
   }
 });
 
 
+
+
+
 router.get('/new-post', withAuth, (req, res) => {
-  res.render('newPost', { loggedIn: req.session.loggedIn });
+  res.render('newPost', { logged_in: req.session.logged_in });
 });
 
 
 
-// router.get('/login', (req, res) => {
-//   res.render('login');
-//   return;
-// });
+
 
 module.exports = router;
 

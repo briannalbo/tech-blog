@@ -1,5 +1,9 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const withAuth = require('../../utils/auth');
+
+
+
 
 //route for creating new user
 router.post('/', async (req, res) => {
@@ -52,11 +56,12 @@ router.post('/login', async (req, res) => {
   }
 });
 //route for user to logout and destroys session
-router.post('/logout', (req, res) => {
+router.get('/logout', (req, res) => {
   if (req.session.logged_in) {
     // Remove the session variables
     req.session.destroy(() => {
-      res.status(204).end();
+      
+      res.render('login');
     });
   } else {
     res.status(404).end();

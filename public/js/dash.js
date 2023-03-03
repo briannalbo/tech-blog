@@ -13,13 +13,13 @@ const logoutDash = async () => {
   };
   
 const newPost = async () => {
-    document.location.replace('dashboard/new-post');
+    document.location.replace('/new-post');
     console.log('create your post here');
 };
 
 document
-.querySelector('#add-post')
-.addEventListener("click", newPost);
+// .querySelector('#add-post')
+// .addEventListener("click", newPost);
 
 
   document

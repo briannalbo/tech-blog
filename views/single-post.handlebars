@@ -6,7 +6,9 @@
     <p>
       {{post.post_text}}
     </p>
-    <p id="post-info"> Posted by: {{post.user.name}} on {{format_date post.createdAt}}</p>
+    <article id="post-info"> Posted by: {{post.user.name}} on {{format_date post.createdAt}}
+    <p> {{#if post.updatedAt}} Updated on {{format_date post.updatedAt}} {{/if}}</p>
+    </article>
   </article>
   </container>
 

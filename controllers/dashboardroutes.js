@@ -32,6 +32,29 @@ router.get('/new-post', withAuth, (req, res) => {
   res.render('newPost', { logged_in: req.session.logged_in });
 });
 
+router.get('/edit/:id', withAuth, async (req, res) => {
+  try {
+    const dbPostData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    if (!dbPostData) {
+      res.status(404).json(err).end();
+    } else {
+      const post = dbPostData.get({ plain: true });
+      res.render('edit-post', { post, logged_in: req.session.logged_in })
+    };
+  } catch (err) {
+    console.log(err);
+    res.redirect('/dashboard');
+  }
+});
+
 
 
 

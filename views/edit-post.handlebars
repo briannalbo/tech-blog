@@ -1,0 +1,30 @@
+{{!-- <h2>new post form here</h2>
+
+<div id="post-box">
+    
+    <h3>New Post</h3>
+<input post-id="{{post.id}}" id="new-post-title" value=" {{post_title}} ">
+<input id="new-post-text"/>
+
+<button id="createPost" type="submit"> Create Post</button>
+
+<script src="/js/newpost.js"></script> --}}
+
+<h2>Edit Post</h2>
+
+<div id="post-box">
+  
+  <h2>Edit Post</h2>
+    <input type="hidden" id="old-post" name="post-id" post-id="{{post.id}}" value="{{post.id}}" />
+
+    <input type="text" id="new-post-title" name="post-title" value="{{post.title}}" />
+
+    <input type="text" id="new-post-text" value="{{post.post_text}}"/>
+     
+  {{!-- </form> --}}
+</div>
+<button id="updateBtn">Update</button>
+
+    <button id="delete-btn">Delete</button>
+
+<script src="/js/edit.js"></script>

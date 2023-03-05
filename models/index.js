@@ -1,7 +1,7 @@
 //imports each model
 const User = require('./User');
 const Post = require('./Post');
-const Comment = require('./Comment');
+const Comment = require('./CommentM');
 
 //establishes relationships between models
 Post.belongsTo(User, {

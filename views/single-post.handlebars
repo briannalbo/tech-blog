@@ -32,7 +32,7 @@
   {{/if}}
 
 {{!-- form for logged in user to add a comment to a post --}}
-
+{{#if logged_in}}
   <form id="new-comment-form" class="card">
 
       <input type="hidden"  id="newComment" name="post-id" value="{{post.id}}" />
@@ -40,6 +40,9 @@
       <textarea id="commentBody" name="comment-body" placeholder="add a comment.." class="form-input"></textarea>
       <button id="commentBtn">Submit</button>
   </form>
- 
+  {{else}}
+
+  <button><a href="/login">Add Comment</a></button>
+ {{/if}}
 
 <script src="/js/comment.js"></script>

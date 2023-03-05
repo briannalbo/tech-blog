@@ -6,12 +6,22 @@
 
 {{!-- creates the div below for each post belonging to the logged in user --}}
 <div class="posts list-group">
+  <h3>Your Posts</h3>
+  {{#if posts}}
   {{#each posts}}
-    <a class="list-item flex-row justify-space-between" href="/dashboard/edit/{{id}}">
+  <ul>
+    <li><a href="/dashboard/edit/{{id}}">
       <span>{{title}}</span>
       <span>{{format_date createdAt}}</span>
     </a>
+    </li>
+    </ul>
   {{/each}}
+
+  {{else}}
+  <p>You have no existing posts to display.</p>
+  {{/if}}
+
 </div>
 
 <script src="/js/dash.js"></script>

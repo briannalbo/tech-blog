@@ -20,6 +20,7 @@
   
   ## Application
   This application uses Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication. Express was used for routing. The MySQL2 and Sequelize packages were used to connect to a MySQL database. The dotenv package was used to protect environment variables. The bcrypt package was used to hash passwords. For additional information on packages used and the application's functionality please refer to the notes within the code in each file.
+  - Deployed Application: https://albo-blog.herokuapp.com/
   
   ## <p align="center">Application Homepage<p align="center">
   ![](https://github.com/briannalbo/tech-blog/blob/main/images/techblog-home.png)

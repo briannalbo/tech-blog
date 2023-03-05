@@ -1,10 +1,10 @@
-<h1>dashboard</h1>
-<button href="/dashboard/new-post">Add Post</button>
-<a href="/dashboard/new-post">add post</a>
-<p> welcome {{user_id.name}}</p>
- 
+{{!-- body of the user dashboard --}}
+<h1>Welcome to your Dashboard</h1>
 
+{{!-- button that brings user to page with the form to add a post --}}
+<button><a href="/dashboard/new-post">Add Post</a></button>
 
+{{!-- creates the div below for each post belonging to the logged in user --}}
 <div class="posts list-group">
   {{#each posts}}
     <a class="list-item flex-row justify-space-between" href="/dashboard/edit/{{id}}">

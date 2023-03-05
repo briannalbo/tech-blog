@@ -1,4 +1,4 @@
-
+{{!-- page that displays a single post and its comments if it has any --}}
 <container id="single-post">
   <article class="card">
     
@@ -12,6 +12,7 @@
   </article>
   </container>
 
+{{!-- if the post has comments, each of them are displayed as outlined below --}}
   {{#if post.comments}}
     <section class="card">
       <div class="card-header">
@@ -30,6 +31,8 @@
     </section>
   {{/if}}
 
+{{!-- form for logged in user to add a comment to a post --}}
+{{!-- {{#if logged_in}} --}}
   <form id="new-comment-form" class="card">
 
       <input type="hidden"  id="newComment" name="post-id" value="{{post.id}}" />
@@ -37,5 +40,10 @@
       <textarea id="commentBody" name="comment-body" placeholder="add a comment.." class="form-input"></textarea>
       <button id="commentBtn">Submit</button>
   </form>
+  {{!-- <script src="/js/comment.js"></script>
+  {{else}}
+  <button id="decoyBtn">Add Comment</button>
+  <script src="/js/comment.js"></script>
+  {{/if}} --}}
 
 <script src="/js/comment.js"></script>

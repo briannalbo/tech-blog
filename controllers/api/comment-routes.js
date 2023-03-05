@@ -1,9 +1,10 @@
+//imports express router, models, and withauth helper
 const router = require('express').Router();
 const { User } = require('../../models');
 const { Comment } = require('../../models/');
 const withAuth = require('../../utils/auth');
 
-// CREATE new comment
+// route for creating a new comment
 router.post('/', withAuth, async (req, res) => {
   try {
     const dbCommentData = await Comment.create({
@@ -19,4 +20,5 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+//exports all of these routes for use
 module.exports = router;

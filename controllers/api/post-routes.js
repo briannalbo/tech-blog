@@ -1,8 +1,9 @@
+//imports express router, models, and withauth helper
 const router = require('express').Router();
 const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// CREATE new post
+// route for creating a new post
 router.post('/', withAuth, async (req, res) => {
   console.log(req.body)
   try {
@@ -59,5 +60,5 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
-
+//exports all of these routes for use
 module.exports = router;

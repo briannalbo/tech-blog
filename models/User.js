@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
-// user model
+// establishes parameters of user data
 class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
@@ -41,7 +41,7 @@ User.init(
     },
   },
   {
-    
+    //uses bcrypt package to secure user passwords
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
@@ -60,4 +60,5 @@ User.init(
   }
 );
 
+//exports user model
 module.exports = User;

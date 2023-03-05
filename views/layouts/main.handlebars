@@ -1,3 +1,4 @@
+{{!-- main layout for all pages --}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +15,13 @@
     <a href="/">Home</a>
     <a href="/dashboard">Dashboard</a>
 
+{{!-- displays a link to login if user is not logged in OR displays a link to logout if user is logged in --}}
     {{#if logged_in}}
     <a href="/api/users/logout">Logout</a>
     {{else}}
     <a href="/login">Login</a>
     {{/if}}
-    {{!-- <a href="/login">Login</a> --}}
+    
     
   </nav>
 </header>

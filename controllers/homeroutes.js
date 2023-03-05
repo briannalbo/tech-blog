@@ -1,11 +1,8 @@
+//imports express router & models
 const router = require('express').Router();
 const { Post, Comment, User } = require('../models/');
 
-// router.get('/', (req, res) => {
-//   res.render('home');
-//   return;
-// });
-
+//route to find and display all existing posts in descending order from when they were created
 router.get('/', async (req, res) => {
   try {
     const postData = await Post.findAll({
@@ -26,6 +23,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+//route to get a single post 
 router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
@@ -41,7 +39,7 @@ router.get('/post/:id', async (req, res) => {
     if (postData) {
       const post = postData.get({ plain: true });
 
-      res.render('single-post', { post });
+      res.render('single-post', { post, logged_in: req.session.logged_in });
     } else {
       res.status(404).end();
     }
@@ -50,11 +48,11 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
-
-
+//route to render the login/sign up form page 
 router.get('/login', (req, res) => {
   res.render('login');
   return;
 });
 
+//exports these routes for use
   module.exports = router;

@@ -1,3 +1,4 @@
+//imports dependencies and files for server to build off of and function
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
@@ -10,7 +11,7 @@ const PORT = process.env.PORT || 3005;
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
+//sets parameters and age limit of user sessions
 const sess = {
     secret: 'Super secret secret',
     cookie: {
@@ -30,7 +31,7 @@ const sess = {
   app.use(session(sess));
 
   const hbs = exhbs.create({ helpers });
-
+//establishes handlebars for use
   app.engine('handlebars', hbs.engine);
   app.set('view engine', 'handlebars');
   
@@ -39,7 +40,7 @@ const sess = {
   app.use(express.static(path.join(__dirname, 'public')));
   
   app.use(routes);
-  
+  //calls sequelize and has app listen at the established port
   sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () =>
       console.log(`listening at ${PORT}!!`)

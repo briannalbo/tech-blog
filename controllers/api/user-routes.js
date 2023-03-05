@@ -1,9 +1,6 @@
+//imports express router & user model
 const router = require('express').Router();
 const { User } = require('../../models');
-const withAuth = require('../../utils/auth');
-
-
-
 
 //route for creating new user
 router.post('/', async (req, res) => {

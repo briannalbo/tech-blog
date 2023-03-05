@@ -16,7 +16,8 @@ router.post('/', withAuth, async (req, res) => {
     res.json(dbCommentData);
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.redirect('login');
+    // res.status(500).json(err);
   }
 });
 

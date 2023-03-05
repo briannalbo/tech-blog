@@ -20,12 +20,12 @@ const addCommentFormHandler = async (event) => {
   };
 
   //function that creates an alert to users not logged in to login or signup in order to add a comment to a post
-  function decoyMessage() {
-    alert("Login or Sign-up to continue.");
-  };
+  // function decoyMessage() {
+  //   alert("Login or Sign-up to continue.");
+  // };
 
-  const decoy = document.querySelector('#decoyBtn');
-  decoy.addEventListener("click", decoyMessage)
+  // const decoy = document.querySelector('#decoyBtn');
+  // decoy.addEventListener("click", decoyMessage)
 
   // event listener for comment form submission
   document

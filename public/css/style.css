@@ -54,6 +54,19 @@ main{
     align-self: center;
 }
 
+.signupinfo {
+    font-size: 10px;
+    float: right;
+    color: gray;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+#signupBtn {
+    margin-top: 4px;
+}
+
 #post-box {
     display: flex;
     width: 500px;

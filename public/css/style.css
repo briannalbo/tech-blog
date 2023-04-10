@@ -127,6 +127,7 @@ main{
 
 #single-post {
     display: flex;
+    align-self: center;
     width: 80vw;
     text-align: center;
     flex-direction: column;

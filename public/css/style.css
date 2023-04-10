@@ -1,5 +1,6 @@
 body{
     width: 100vw;
+    align-content: center;
 }
 
 header {
@@ -125,7 +126,7 @@ main{
 
 #single-post {
     display: flex;
-    width: 50vw;
+    width: 75vw;
     text-align: center;
     flex-direction: column;
     border: 2px solid gray;

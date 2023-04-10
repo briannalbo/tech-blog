@@ -1,3 +1,7 @@
+body{
+    width: 100vw;
+}
+
 header {
     
     background-color: rgb(40, 68, 68);
@@ -121,7 +125,7 @@ main{
 
 #single-post {
     display: flex;
-    width: 550px;
+    width: 50vw;
     text-align: center;
     flex-direction: column;
     border: 2px solid gray;

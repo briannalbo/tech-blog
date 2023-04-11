@@ -26,11 +26,6 @@ header h1 {
     padding:0;
     margin-top: 10px;
     border: 0;
-    /* text-align: center; */
-    /* padding-top: 10px; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* text-align: center; */
     
 }
 
@@ -48,6 +43,11 @@ nav a{
 
 nav a:hover{
     color: rgb(65, 143, 143)
+}
+
+#welcome {
+    font-family: monospace;
+    font-size: 26px;
 }
 
 main{

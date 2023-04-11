@@ -188,9 +188,14 @@ main{
     margin-top: 5px;
 }
 
+.card-comment{
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+}
+
 #user-comment {
-    /* display: flex; */
-    width: 500px;
+    width: 50vw;
     flex-direction: column;
     border-bottom: .5px solid gray;
     margin-bottom: 10px;
@@ -198,13 +203,16 @@ main{
 }
 
 #user-comment-info {
-    width: 500px;
-    height: 20px;
+    width: 50vw;
+    height: 25px;
     text-align: left;
-    background-color: darkblue;
-    color: aliceblue;
+    background-color:rgb(40, 68, 68);
+    color: whitesmoke;
     align-self: flex-start;
-    text-indent: 10px;
+    text-indent: 20px;
+    font-size: 22px;
+    padding-top: 4px;
+    padding-bottom: 2px;
 }
 
 #comment-date {
@@ -223,5 +231,26 @@ main{
         margin-bottom: 20px;
         border-top-right-radius: 15px;
         border-top-left-radius: 15px;
+    }
+
+    #user-comment-info {
+        width: 90vw;
+        height: 25px;
+        text-align: left;
+        background-color:rgb(40, 68, 68);
+        color: whitesmoke;
+        align-self: flex-start;
+        text-indent: 20px;
+        font-size: 22px;
+        padding-top: 4px;
+        padding-bottom: 2px;
+    }
+
+    #user-comment {
+        width: 90vw;
+        flex-direction: column;
+        border-bottom: .5px solid gray;
+        margin-bottom: 10px;
+        padding: 0;
     }
   }
